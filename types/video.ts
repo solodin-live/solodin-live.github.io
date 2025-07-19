@@ -2,7 +2,7 @@ export interface VideoSection {
   timestamp: string // "00:02:30"
   title: string
   tickers: string[]
-  description?: string
+  description?: string[]
 }
 
 export interface Video {
