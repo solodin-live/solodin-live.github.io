@@ -9,6 +9,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  reactStrictMode: true,
+  swcMinify: true,
+  output: "standalone",
+  skipTrailingSlashRedirect: true,
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 }
 
 export default nextConfig
