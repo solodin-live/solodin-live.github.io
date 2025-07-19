@@ -3,6 +3,7 @@ import PopularTickers from "@/components/ui/popular-tickers"
 import VideoGroups from "@/components/ui/video-groups"
 import HeroTitle from "@/components/ui/hero-title"
 import MainLayout from "@/components/layout/main-layout"
+import AuthorResources from "@/components/ui/author-resources"
 
 export default function HomePage() {
   return (
@@ -17,6 +18,8 @@ export default function HomePage() {
           <PopularTickers />
         </div>
       </section>
+
+      <AuthorResources />
 
       <section className="w-full max-w-6xl">
         <h2 className="text-2xl font-semibold mb-6 text-white text-center md:text-left">Видео по месяцам</h2>
