@@ -63,7 +63,7 @@ export const mockVideos: Video[] = [
     id: "efgh5672",
     title: "Увеличиваю СТАВКУ на Золото и Серебро",
     youtubeLink: "https://www.youtube.com/watch?v=Xg5oh9FNTvU",
-    date: "15 июля 2025",
+    date: "12 июля 2025",
     sections: [
       {
         timestamp: "00:01:00",
@@ -108,6 +108,102 @@ export const mockVideos: Video[] = [
         title: "Риски в IT-секторе",
         tickers: ["IT-сектор", "Риски"],
         description: "Потенциальные риски и вызовы для технологических компаний.",
+      },
+    ],
+  },
+  {
+    id: "mnop3456",
+    title: "Анализ рынка: Июнь 2025",
+    youtubeLink: "https://www.youtube.com/watch?v=example6",
+    date: "28 июня 2025",
+    sections: [
+      {
+        timestamp: "00:02:00",
+        title: "Обзор рынка за месяц",
+        tickers: ["SPY", "QQQ"],
+        description: "Итоги торгов за июнь 2025 года.",
+      },
+      {
+        timestamp: "00:10:00",
+        title: "Технологический сектор",
+        tickers: ["XLK", "NVDA", "AAPL"],
+        description: "Анализ технологических акций.",
+      },
+    ],
+  },
+  {
+    id: "qrst7890",
+    title: "Майский обзор: Что ждет рынок?",
+    youtubeLink: "https://www.youtube.com/watch?v=example7",
+    date: "25 мая 2025",
+    sections: [
+      {
+        timestamp: "00:01:30",
+        title: "Майские тренды",
+        tickers: ["SPY", "DIA"],
+        description: "Анализ майских трендов на рынке.",
+      },
+      {
+        timestamp: "00:08:00",
+        title: "Сырьевые товары",
+        tickers: ["Нефть", "Золото", "Серебро"],
+        description: "Обзор сырьевых рынков.",
+      },
+    ],
+  },
+  {
+    id: "uvwx1234",
+    title: "Апрельские итоги",
+    youtubeLink: "https://www.youtube.com/watch?v=example8",
+    date: "30 апреля 2025",
+    sections: [
+      {
+        timestamp: "00:02:15",
+        title: "Итоги апреля",
+        tickers: ["SPY", "QQQ", "IWM"],
+        description: "Подведение итогов апреля 2025.",
+      },
+    ],
+  },
+  {
+    id: "yzab5678",
+    title: "Мартовский разбор",
+    youtubeLink: "https://www.youtube.com/watch?v=example9",
+    date: "15 марта 2025",
+    sections: [
+      {
+        timestamp: "00:01:45",
+        title: "Мартовские события",
+        tickers: ["SPY", "TLT"],
+        description: "Ключевые события марта 2025.",
+      },
+    ],
+  },
+  {
+    id: "cdef9012",
+    title: "Февральский анализ",
+    youtubeLink: "https://www.youtube.com/watch?v=example10",
+    date: "28 февраля 2025",
+    sections: [
+      {
+        timestamp: "00:02:30",
+        title: "Февральские тренды",
+        tickers: ["SPY", "GLD"],
+        description: "Анализ февральских трендов.",
+      },
+    ],
+  },
+  {
+    id: "ghij3456",
+    title: "Январский старт",
+    youtubeLink: "https://www.youtube.com/watch?v=example11",
+    date: "10 января 2025",
+    sections: [
+      {
+        timestamp: "00:01:20",
+        title: "Начало года",
+        tickers: ["SPY", "QQQ"],
+        description: "Анализ начала 2025 года.",
       },
     ],
   },

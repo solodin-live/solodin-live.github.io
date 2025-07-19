@@ -1,13 +1,10 @@
 import SearchBar from "@/components/ui/search-bar"
 import PopularTickers from "@/components/ui/popular-tickers"
-import VideoCard from "@/components/ui/video-card"
+import VideoGroups from "@/components/ui/video-groups"
 import HeroTitle from "@/components/ui/hero-title"
 import MainLayout from "@/components/layout/main-layout"
-import { VideoService } from "@/services/video.service"
 
 export default function HomePage() {
-  const videos = VideoService.getAllVideos()
-
   return (
     <MainLayout>
       <div>
@@ -22,12 +19,8 @@ export default function HomePage() {
       </section>
 
       <section className="w-full max-w-6xl">
-        <h2 className="text-2xl font-semibold mb-6 text-white text-center md:text-left">Последние добавленные видео</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-          {videos.map((video) => (
-            <VideoCard key={video.id} video={video} />
-          ))}
-        </div>
+        <h2 className="text-2xl font-semibold mb-6 text-white text-center md:text-left">Видео по месяцам</h2>
+        <VideoGroups initialLimit={5} />
       </section>
     </MainLayout>
   )
