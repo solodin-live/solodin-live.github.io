@@ -1,4 +1,4 @@
-import type { Video } from "./path/to/video" // Assuming Video is declared in another file, you need to import it
+import type { Video } from "./video"
 
 export interface SearchBarProps {
   placeholder?: string

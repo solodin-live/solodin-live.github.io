@@ -36,7 +36,7 @@ export default function VideoGroups({ initialLimit = 5 }: VideoGroupsProps) {
             variant="outline"
             className="text-black border-black/20 hover:bg-black/10 transition-colors"
           >
-            Загрузить еще {Math.min(50, totalVideos - displayLimit)} видео
+            Загрузить еще {Math.min(initialLimit, totalVideos - displayLimit)} видео
           </Button>
         </div>
       )}

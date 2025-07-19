@@ -1,5 +1,6 @@
 import type { Video, VideoSearchResult } from "@/types"
-import { mockVideos } from "@/data/mock-videos"
+
+import { mockVideos } from "@/data/mock-videos";
 
 export interface VideoGroup {
   month: string // "2025-07"
