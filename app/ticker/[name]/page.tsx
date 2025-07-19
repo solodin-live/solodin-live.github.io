@@ -7,6 +7,7 @@ import TickerAnalyticsCard from "@/components/ui/ticker-analytics-card"
 import VideoMentionsList from "@/components/ui/video-mentions-list"
 import { VideoService } from "@/services/video.service"
 import { TickerAnalyticsService } from "@/services/ticker-analytics.service"
+import HeroTitle from "@/components/ui/hero-title"
 
 interface TickerPageProps {
   params: Promise<{
@@ -30,7 +31,9 @@ export default function TickerPage({ params }: TickerPageProps) {
 
   return (
     <MainLayout>
-      <PageHeader title={tickerOrTopic.toUpperCase()} subtitle="Аналитика и упоминания в видео Дмитрия Солодина" />
+      <div className="m-20 mt-10">
+        <HeroTitle />
+      </div>
 
       <div className="w-full max-w-6xl space-y-12">
         {/* Аналитическая сводка */}

@@ -8,6 +8,7 @@ import PageHeader from "@/components/layout/page-header"
 import { VideoService } from "@/services/video.service"
 import { YouTubeService } from "@/services/youtube.service"
 import { ROUTES } from "@/config/constants"
+import HeroTitle from "@/components/ui/hero-title"
 
 interface VideoPageProps {
   params: {
@@ -21,6 +22,9 @@ export default function VideoPage({ params }: VideoPageProps) {
   if (!video) {
     return (
       <MainLayout>
+        <div className="m-20 mt-10">
+          <HeroTitle />
+        </div>
         <PageHeader title="Видео не найдено" />
         <p className="mt-4 text-gray-300">Пожалуйста, проверьте ID видео.</p>
         <Link href={ROUTES.home} className="mt-6">
@@ -34,8 +38,10 @@ export default function VideoPage({ params }: VideoPageProps) {
 
   return (
     <MainLayout>
-      <PageHeader title={video.title} />
-
+      <div className="m-20 mt-10">
+        <HeroTitle />
+      </div>
+      
       {videoId && (
         <div className="w-full max-w-4xl mb-8 aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-white/10">
           <iframe
@@ -48,6 +54,10 @@ export default function VideoPage({ params }: VideoPageProps) {
           ></iframe>
         </div>
       )}
+
+      <div className="mt-10">
+        <PageHeader title={video.title} />
+      </div>
 
       <section className="w-full max-w-4xl">
         <h2 className="text-2xl font-semibold mb-6 text-white text-center md:text-left">Разделы видео</h2>

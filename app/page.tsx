@@ -8,8 +8,8 @@ import AuthorResources from "@/components/ui/author-resources"
 export default function HomePage() {
   return (
     <MainLayout>
-      <div>
-        <HeroTitle>🏀 solodin.live</HeroTitle>
+      <div className="m-10">
+        <HeroTitle />
       </div>
       
       <section className="w-full max-w-4xl mb-20">
