@@ -3,7 +3,7 @@ import type { Video } from "@/types"
 export const mockVideos: Video[] = [
   {
     id: "abcd1234",
-    title: "Обзор рынка на 18 июля 2025",
+    title: "Экономика РФ после войны",
     youtubeLink: "https://www.youtube.com/watch?v=OQmWfkPi5sU",
     date: "18 июля 2025",
     sections: [
@@ -34,9 +34,9 @@ export const mockVideos: Video[] = [
     ],
   },
   {
-    id: "efgh5678",
-    title: "Макроэкономика и золото: что дальше?",
-    youtubeLink: "https://www.youtube.com/watch?v=efgh5678",
+    id: "efgh5671",
+    title: "✈️СЕРЕБРО: Как заработать х10 на пирамидинге?",
+    youtubeLink: "https://www.youtube.com/watch?v=nswcGlSh4Gg",
     date: "15 июля 2025",
     sections: [
       {
@@ -60,9 +60,9 @@ export const mockVideos: Video[] = [
     ],
   },
   {
-    id: "efgh5678",
-    title: "Макроэкономика и золото: что дальше?",
-    youtubeLink: "https://www.youtube.com/watch?v=efgh5678",
+    id: "efgh5672",
+    title: "Увеличиваю СТАВКУ на Золото и Серебро",
+    youtubeLink: "https://www.youtube.com/watch?v=Xg5oh9FNTvU",
     date: "15 июля 2025",
     sections: [
       {
@@ -87,8 +87,8 @@ export const mockVideos: Video[] = [
   },
   {
     id: "ijkl9012",
-    title: "Технологический сектор: NVIDIA и Apple",
-    youtubeLink: "https://www.youtube.com/watch?v=nswcGlSh4Gg&t=6132s",
+    title: "Когда SPX уже упадёт, Димон?!",
+    youtubeLink: "https://www.youtube.com/watch?v=xm4RUymUjMY",
     date: "10 июля 2025",
     sections: [
       {

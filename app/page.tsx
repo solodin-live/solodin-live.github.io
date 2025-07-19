@@ -14,11 +14,7 @@ export default function HomePage() {
         <HeroTitle>🏀 solodin.live</HeroTitle>
       </div>
       
-
       <section className="w-full max-w-4xl mb-20">
-        <h2 className="text-2xl font-semibold text-center text-white mb-6">
-          Найдите упоминания любого тикера или темы
-        </h2>
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 shadow-2xl">
           <SearchBar />
           <PopularTickers />

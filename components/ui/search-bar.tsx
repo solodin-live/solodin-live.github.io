@@ -15,15 +15,15 @@ export default function SearchBar({
 
   return (
     <form onSubmit={handleSubmit} className={cn("flex w-full max-w-2xl mx-auto gap-2", className)}>
-      <div className="relative flex-grow">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+      <div className="flex items-center flex-grow group">
+        <Search className="w-4 h-4 text-gray-400 ml-3 mr-2" />
         <Input
           type="text"
           placeholder={placeholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           disabled={isLoading}
-          className="pl-10 flex-grow bg-white/15 backdrop-blur-sm text-white placeholder:text-gray-300 border-white/20 focus:border-primary focus:ring-primary focus:bg-white/20 text-lg py-3 px-4"
+          className="flex-grow bg-white/15 backdrop-blur-sm text-white placeholder:text-gray-300 border-white/20 focus:border-primary focus:ring-primary focus:bg-white/20 text-lg py-3 px-4"
         />
       </div>
       <Button

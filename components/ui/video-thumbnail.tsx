@@ -29,8 +29,6 @@ export default function VideoThumbnail({ youtubeUrl, title, className, showPlayB
 
   return (
     <div className={cn("relative w-full h-full overflow-hidden", className)}>
-      {isLoading && <div className="absolute inset-0 bg-gray-800 animate-pulse" />}
-
       <img
         src={hasError ? fallbackUrl || primaryUrl : primaryUrl}
         alt={`Превью видео: ${title}`}
