@@ -1,0 +1,7 @@
+import type { Video } from "@/types"
+
+export const videosData: Video[] = [
+  require("./raw/2025/20250718.json") as Video,
+  require("./raw/2025/20250711.json") as Video,
+  require("./raw/2025/20250704.json") as Video,
+]

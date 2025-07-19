@@ -1,6 +1,6 @@
 import type { Video, VideoSearchResult } from "@/types"
 
-import { mockVideos } from "@/data/mock-videos";
+import { videosData } from "@/data/videos-data";
 
 export interface VideoGroup {
   month: string // "2025-07"
@@ -9,7 +9,7 @@ export interface VideoGroup {
 }
 
 export class VideoService {
-  private static videos: Video[] = mockVideos
+  private static videos: Video[] = videosData
 
   static getAllVideos(): Video[] {
     return this.videos
