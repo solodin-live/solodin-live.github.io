@@ -20,7 +20,7 @@ export default function VideoCard({ video, className }: VideoCardProps) {
       )}
     >
       {/* Основная ссылка на YouTube */}
-      <Link href={video.youtubeLink} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={`${ROUTES.video(video.id)}`} target="_blank" rel="noopener noreferrer" className="block">
         {/* Превью видео */}
         <div className="aspect-video bg-gray-900">
           <VideoThumbnail youtubeUrl={video.youtubeLink} title={video.title} />

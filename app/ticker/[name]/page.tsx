@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import MainLayout from "@/components/layout/main-layout"
 import PageHeader from "@/components/layout/page-header"
 import TickerAnalyticsCard from "@/components/ui/ticker-analytics-card"
@@ -8,13 +9,14 @@ import { VideoService } from "@/services/video.service"
 import { TickerAnalyticsService } from "@/services/ticker-analytics.service"
 
 interface TickerPageProps {
-  params: {
+  params: Promise<{
     name: string
-  }
+  }>
 }
 
 export default function TickerPage({ params }: TickerPageProps) {
-  const tickerOrTopic = decodeURIComponent(params.name)
+  const resolvedParams = React.use(params)
+  const tickerOrTopic = decodeURIComponent(resolvedParams.name)
   const relevantSections = VideoService.searchByTicker(tickerOrTopic)
 
   // Получаем аналитику (реальную или мок)

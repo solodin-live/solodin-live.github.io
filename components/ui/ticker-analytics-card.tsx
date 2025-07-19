@@ -106,8 +106,8 @@ export default function TickerAnalyticsCard({ analytics, className }: TickerAnal
         </div>
 
         {/* Метрики */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-gray-200">
-          <div className="flex items-center gap-2">
+        <div className="flex justify-between items-start pt-4 border-t border-gray-200">
+          <div className="flex items-start gap-2">
             <Calendar className="w-4 h-4 text-gray-500" />
             <div>
               <p className="text-xs text-gray-500">Последнее упоминание</p>
@@ -116,7 +116,7 @@ export default function TickerAnalyticsCard({ analytics, className }: TickerAnal
           </div>
 
           {analytics.priceTarget && (
-            <div className="flex items-center gap-2">
+            <div className="flex items-start gap-2">
               <Target className="w-4 h-4 text-gray-500" />
               <div>
                 <p className="text-xs text-gray-500">Целевая цена</p>
@@ -124,16 +124,6 @@ export default function TickerAnalyticsCard({ analytics, className }: TickerAnal
               </div>
             </div>
           )}
-
-          <div className="flex items-center gap-2">
-            <AlertTriangle className="w-4 h-4 text-gray-500" />
-            <div>
-              <p className="text-xs text-gray-500">Уровень риска</p>
-              <Badge variant="outline" className={getRiskColor()}>
-                {getRiskText()}
-              </Badge>
-            </div>
-          </div>
         </div>
       </CardContent>
     </Card>
