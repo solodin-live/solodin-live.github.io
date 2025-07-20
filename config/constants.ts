@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   keywords: ["фондовый рынок", "аналитика", "тикеры", "инвестиции", "трейдинг"],
 } as const
 
-export const POPULAR_TICKERS = ["SPY", "TSLA", "Золото", "Инфляция", "Нефть", "AAPL", "NVDA"] as const
+export const POPULAR_TICKERS = ["SPY", "TSLA", "GLD", "Инфляция", "Нефть", "AAPL", "NVDA"] as const
 
 export const YOUTUBE_CONFIG = {
   thumbnailQualities: {

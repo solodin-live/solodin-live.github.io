@@ -3,8 +3,8 @@ import type { TickerAnalytics } from "@/types"
 export class TickerAnalyticsService {
   // Мок данные для аналитики тикеров
   private static mockAnalytics: Record<string, TickerAnalytics> = {
-    spy: {
-      ticker: "SPY",
+    spx: {
+      ticker: "SPX",
       summary:
         "S&P 500 ETF показывает стабильный рост на фоне позитивных макроэкономических данных. Дмитрий отмечает потенциал для дальнейшего роста, но предупреждает о возможной коррекции в краткосрочной перспективе.",
       sentiment: "positive",
@@ -35,8 +35,8 @@ export class TickerAnalyticsService {
       priceTarget: "$280-320",
       riskLevel: "high",
     },
-    золото: {
-      ticker: "Золото",
+    gold: {
+      ticker: "GLD",
       summary:
         "Золото остается привлекательным защитным активом в условиях геополитической нестабильности и инфляционных рисков. Дмитрий рекомендует держать 5-10% портфеля в золоте.",
       sentiment: "positive",
