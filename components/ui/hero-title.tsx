@@ -23,19 +23,20 @@ export default function HeroTitle() {
         </div>
 
         {/* Основной заголовок */}
-        <h1
-          className={cn(
-            "relative text-2xl md:text-4xl lg:text-4xl font-extrabold text-center tracking-tight transition-all duration-1000",
-            "drop-shadow-2xl",
-            "bg-gradient-to-r from-primary via-purple-400 to-primary bg-clip-text",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
-          )}
-        >
-          🏀 СОЛОДИН <span className="text-white bg-red-600 rounded-lg px-4 py-2">LIVE</span>
-        </h1>
+        <div className="flex items-center justify-center">
+          <span className="text-4xl md:text-6xl lg:text-6xl font-extrabold text-center tracking-tight transition-all duration-1000">
+            ⛹🏼‍♂️
+          </span>
+          <span className="text-2xl md:text-4xl lg:text-4xl font-extrabold text-center tracking-tight transition-all duration-1000">
+            СОЛОДИН
+          </span>
+          <span className="text-2xl md:text-4xl lg:text-4xl font-extrabold text-center tracking-tight transition-all duration-1000">
+            <span className="text-white bg-red-600 rounded-lg px-4 py-2">LIVE</span>
+          </span>
+        </div>
 
         {/* Подсветка снизу */}
-        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-60"></div>
+        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-72 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
       </div>
     </Link>
   )
