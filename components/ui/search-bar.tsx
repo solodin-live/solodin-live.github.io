@@ -2,21 +2,20 @@
 
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Search, Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import { useSearch } from "@/hooks/use-search"
 import { cn } from "@/lib/utils"
 import type { SearchBarProps } from "@/types"
 
 export default function SearchBar({
-  placeholder = "Введите тикер или тему (например, SPY, нефть, ставки)",
+  placeholder = "🔍 Введите тикер или тему (например, SPY, нефть, ставки)",
   className,
 }: SearchBarProps) {
   const { query, setQuery, isLoading, handleSubmit } = useSearch()
 
   return (
-    <form onSubmit={handleSubmit} className={cn("flex w-full max-w-2xl mx-auto gap-2", className)}>
+    <form onSubmit={handleSubmit} className={cn("flex flex-col md:flex-row w-full max-w-2xl mx-auto gap-2", className)}>
       <div className="flex items-center flex-grow group">
-        <Search className="w-4 h-4 text-gray-400 ml-3 mr-2" />
         <Input
           type="text"
           placeholder={placeholder}

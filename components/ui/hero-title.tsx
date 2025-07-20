@@ -28,11 +28,11 @@ export default function HeroTitle() {
             ⛹🏼‍♂️
           </span>
           <span className="text-2xl md:text-4xl lg:text-4xl font-extrabold text-center tracking-tight transition-all duration-1000">
-            СОЛОДИН
+            СОЛОДИН &nbsp;
           </span>
-          <span className="text-2xl md:text-4xl lg:text-4xl font-extrabold text-center tracking-tight transition-all duration-1000">
+          <div className="animate-bounce">
             <span className="text-white bg-red-600 rounded-lg px-4 py-2">LIVE</span>
-          </span>
+          </div>
         </div>
 
         {/* Подсветка снизу */}

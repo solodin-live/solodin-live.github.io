@@ -6,7 +6,7 @@ import type { PopularTickersProps } from "@/types"
 
 export default function PopularTickers({ tickers = POPULAR_TICKERS, className }: PopularTickersProps) {
   return (
-    <div className={cn("flex flex-wrap justify-center gap-3 mt-8", className)}>
+    <div className={cn("hidden md:flex flex-wrap justify-center gap-3 mt-8", className)}>
       {tickers.map((ticker) => (
         <Link key={ticker} href={ROUTES.ticker(ticker)} passHref>
           <Badge
