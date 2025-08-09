@@ -15,8 +15,9 @@ interface VideoPageProps {
   }
 }
 
-export default function VideoPage({ params }: VideoPageProps) {
-  const video = VideoService.getVideoById(params.id)
+export default async function VideoPage({ params }: VideoPageProps) {
+  const { id } = await params;
+  const video = VideoService.getVideoById(id);
 
   if (!video) {
     return (
