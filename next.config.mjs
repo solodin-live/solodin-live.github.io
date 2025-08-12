@@ -10,8 +10,7 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
-  swcMinify: true,
-  output: "standalone",
+  output: "export",
   skipTrailingSlashRedirect: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 }

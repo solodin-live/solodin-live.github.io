@@ -1,6 +1,24 @@
-"use client"
-
 import React from "react"
+
+// Force static generation for static export
+export const dynamic = 'force-static';
+
+// Generate static params for all tickers
+export async function generateStaticParams() {
+  const { videosData } = await import("@/data/videos-data");
+  const tickers = Array.from(
+    new Set(
+      videosData.flatMap((video) =>
+        video.sections.flatMap((section) => section.tickers)
+      )
+    )
+  );
+  
+  return tickers.map((ticker) => ({
+    name: ticker,
+  }));
+}
+
 import MainLayout from "@/components/layout/main-layout"
 import PageHeader from "@/components/layout/page-header"
 import TickerAnalyticsCard from "@/components/ui/ticker-analytics-card"
@@ -10,14 +28,14 @@ import { TickerAnalyticsService } from "@/services/ticker-analytics.service"
 import HeroTitle from "@/components/ui/hero-title"
 
 interface TickerPageProps {
-  params: Promise<{
+  params: {
     name: string
-  }>
+  }
 }
 
-export default function TickerPage({ params }: TickerPageProps) {
-  const resolvedParams = React.use(params)
-  const tickerOrTopic = decodeURIComponent(resolvedParams.name)
+export default async function TickerPage({ params }: TickerPageProps) {
+  const { name } = params;
+  const tickerOrTopic = decodeURIComponent(name)
   const relevantSections = VideoService.searchByTicker(tickerOrTopic)
 
   // Получаем аналитику (реальную или мок)

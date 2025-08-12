@@ -1,5 +1,8 @@
 import { videosData } from "@/data/videos-data";
 
+// Force static generation for static export
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const videos = Array.from(
     new Map(

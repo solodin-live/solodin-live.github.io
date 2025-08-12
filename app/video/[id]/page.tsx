@@ -15,6 +15,18 @@ interface VideoPageProps {
   }
 }
 
+// Force static generation for static export
+export const dynamic = 'force-static';
+
+// Generate static params for all videos
+export async function generateStaticParams() {
+  const { videosData } = await import("@/data/videos-data");
+  
+  return videosData.map((video) => ({
+    id: video.id,
+  }));
+}
+
 export default async function VideoPage({ params }: VideoPageProps) {
   const { id } = await params;
   const video = VideoService.getVideoById(id);
