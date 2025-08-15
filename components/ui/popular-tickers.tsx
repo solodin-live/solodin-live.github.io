@@ -1,13 +1,20 @@
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
-import { POPULAR_TICKERS, ROUTES } from "@/config/constants"
+import { ROUTES } from "@/config/constants"
 import { cn } from "@/lib/utils"
+import { VideoService } from "@/services/video.service"
 import type { PopularTickersProps } from "@/types"
 
-export default function PopularTickers({ tickers = POPULAR_TICKERS, className }: PopularTickersProps) {
+export default function PopularTickers({ className }: PopularTickersProps) {
+
+  const videos = VideoService.getAllVideos()
+  const tickers = videos.map(video => video.sections.flatMap(section => section.tickers)).flat().filter(ticker => ticker !== "")
+  const uniqueTickers = [...new Set(tickers)]
+  const randomTickers = uniqueTickers.sort(() => 0.5 - Math.random()).slice(0, 6)
+
   return (
     <div className={cn("hidden md:flex flex-wrap justify-center gap-3 mt-8", className)}>
-      {tickers.map((ticker) => (
+      {randomTickers.map((ticker) => (
         <Link key={ticker} href={ROUTES.ticker(ticker)} passHref>
           <Badge
             variant="secondary"
