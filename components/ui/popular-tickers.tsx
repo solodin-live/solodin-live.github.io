@@ -1,16 +1,29 @@
+"use client"
+
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { ROUTES } from "@/config/constants"
 import { cn } from "@/lib/utils"
-import { VideoService } from "@/services/video.service"
+import { useRandomTickers } from "@/hooks/use-random-tickers"
 import type { PopularTickersProps } from "@/types"
 
 export default function PopularTickers({ className }: PopularTickersProps) {
+  const randomTickers = useRandomTickers(6)
 
-  const videos = VideoService.getAllVideos()
-  const tickers = videos.map(video => video.sections.flatMap(section => section.tickers)).flat().filter(ticker => ticker !== "")
-  const uniqueTickers = [...new Set(tickers)]
-  const randomTickers = uniqueTickers.sort(() => 0.5 - Math.random()).slice(0, 6)
+  // Show loading state while tickers are being randomized
+  if (randomTickers.length === 0) {
+    return (
+      <div className={cn("hidden md:flex flex-wrap justify-center gap-3 mt-8", className)}>
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="px-4 py-2 text-base font-medium bg-white/10 backdrop-blur-sm text-white border-white/20 animate-pulse"
+            style={{ width: '80px', height: '40px' }}
+          />
+        ))}
+      </div>
+    )
+  }
 
   return (
     <div className={cn("hidden md:flex flex-wrap justify-center gap-3 mt-8", className)}>

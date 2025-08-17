@@ -16,9 +16,10 @@ export function useSearch() {
       const searchTerm = searchQuery || query
       if (!searchTerm.trim()) return
 
+      const ticker = searchTerm.trim().toUpperCase()
       setIsLoading(true)
       try {
-        router.push(ROUTES.ticker(searchTerm.trim()))
+        router.push(ROUTES.ticker(ticker))
       } finally {
         setIsLoading(false)
       }

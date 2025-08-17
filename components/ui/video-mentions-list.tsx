@@ -21,6 +21,10 @@ export default function VideoMentionsList({ mentions, currentTicker, className }
     )
   }
 
+  const sortedMentions = mentions.sort((a, b) => {
+    return a.videoDate > b.videoDate ? -1 : 1;
+  });
+
   return (
     <div className={className}>
       <h2 className="text-2xl font-semibold mb-6 text-white flex items-center gap-2">
@@ -29,7 +33,7 @@ export default function VideoMentionsList({ mentions, currentTicker, className }
       </h2>
 
       <div className="grid gap-6">
-        {mentions.map((mention, index) => (
+        {sortedMentions.map((mention, index) => (
           <VideoMentionCard
             key={index}
             mention={mention}

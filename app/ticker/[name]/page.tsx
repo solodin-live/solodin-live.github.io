@@ -20,7 +20,6 @@ export async function generateStaticParams() {
 }
 
 import MainLayout from "@/components/layout/main-layout"
-import PageHeader from "@/components/layout/page-header"
 import TickerAnalyticsCard from "@/components/ui/ticker-analytics-card"
 import VideoMentionsList from "@/components/ui/video-mentions-list"
 import { VideoService } from "@/services/video.service"
@@ -34,7 +33,7 @@ interface TickerPageProps {
 }
 
 export default async function TickerPage({ params }: TickerPageProps) {
-  const { name } = params;
+  const { name } = await params;
   const tickerOrTopic = decodeURIComponent(name)
   const relevantSections = VideoService.searchByTicker(tickerOrTopic)
 
