@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { TrendingUp, TrendingDown, Minus, AlertTriangle, Target, Calendar, BarChart3 } from "lucide-react"
+import { Target, Calendar, BarChart3 } from "lucide-react"
 import type { TickerAnalytics } from "@/types"
 import { cn } from "@/lib/utils"
 
@@ -10,61 +9,6 @@ interface TickerAnalyticsCardProps {
 }
 
 export default function TickerAnalyticsCard({ analytics, className }: TickerAnalyticsCardProps) {
-  const getSentimentIcon = () => {
-    switch (analytics.sentiment) {
-      case "positive":
-        return <TrendingUp className="w-5 h-5 text-green-500" />
-      case "negative":
-        return <TrendingDown className="w-5 h-5 text-red-500" />
-      default:
-        return <Minus className="w-5 h-5 text-yellow-500" />
-    }
-  }
-
-  const getSentimentColor = () => {
-    switch (analytics.sentiment) {
-      case "positive":
-        return "text-green-600 bg-green-50 border-green-200"
-      case "negative":
-        return "text-red-600 bg-red-50 border-red-200"
-      default:
-        return "text-yellow-600 bg-yellow-50 border-yellow-200"
-    }
-  }
-
-  const getRiskColor = () => {
-    switch (analytics.riskLevel) {
-      case "low":
-        return "text-green-600 bg-green-50 border-green-200"
-      case "high":
-        return "text-red-600 bg-red-50 border-red-200"
-      default:
-        return "text-yellow-600 bg-yellow-50 border-yellow-200"
-    }
-  }
-
-  const getSentimentText = () => {
-    switch (analytics.sentiment) {
-      case "positive":
-        return "Позитивный"
-      case "negative":
-        return "Негативный"
-      default:
-        return "Нейтральный"
-    }
-  }
-
-  const getRiskText = () => {
-    switch (analytics.riskLevel) {
-      case "low":
-        return "Низкий"
-      case "high":
-        return "Высокий"
-      default:
-        return "Средний"
-    }
-  }
-
   return (
     <Card className={cn("bg-card text-card-foreground shadow-xl border-0", className)}>
       <CardHeader>
@@ -73,12 +17,6 @@ export default function TickerAnalyticsCard({ analytics, className }: TickerAnal
             <BarChart3 className="w-6 h-6" />
             Аналитическая сводка по {analytics.ticker}
           </CardTitle>
-          <div className="flex items-center gap-2">
-            {getSentimentIcon()}
-            <Badge variant="outline" className={getSentimentColor()}>
-              {getSentimentText()}
-            </Badge>
-          </div>
         </div>
         <CardDescription className="text-base">
           Основано на {analytics.totalMentions} упоминаниях в видео
