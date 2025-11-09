@@ -14,4 +14,5 @@ export const videosData: Video[] = [
   require("./raw/2025/20251003.json") as Video,
   require("./raw/2025/20251019.json") as Video,
   require("./raw/2025/20251024.json") as Video,
+  require("./raw/2025/20251031.json") as Video,
 ]
